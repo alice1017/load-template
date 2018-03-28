@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+from setuptools import setup, find_packages
+
+setup(
+    name="",
+    author="",
+    description="",
+    version="",
+    license="",
+    packages=find_packages(),
+    install_requires=[""],
+    entry_points={
+        "console_scripts": [
+            "name=package.__main__:main" # change sample variables
+        ]
+    },
+    classifiers=[
+        "Development Status :: ", # write status
+        "Programming Language :: Python :: " # write python version
+    ]
+)
