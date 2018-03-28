@@ -7,6 +7,8 @@
 The **load-template** create a file from the **template** with the **variables**.
 You can create templates as freely if you save it :open_file_folder: `~/.templates/`.
 
+If you want to add new default template, please send pull request. :+1:
+
 ## :wrench: Usage
 
 ### basic
@@ -51,5 +53,7 @@ $ python setup.py build install
 You need to clone this repository for installation, Because the
 load-template copies the default templates to `~/.templates/` directory.
 
+## :eyes: Contribution
 
-
+1. Forks on [Github](https://github.com/alice1017/load-template)
+2. Find a bug? Add new default template? Send a pull request to get it merged and published.
