@@ -2,6 +2,7 @@
 # coding: utf-8
 
 import sys
+import codecs
 import traceback
 
 from .cli import parser
@@ -24,7 +25,7 @@ def program(args):
     else:
         contents = template_contents
 
-    with open(args.filename, "w") as fp:
+    with codecs.open(args.filename, "w", "utf-8") as fp:
         fp.write(contents)
 
     return 0

@@ -2,6 +2,7 @@
 # coding: utf-8
 
 import os
+import codecs
 import shutil
 
 TEMPLATE_DIR = os.path.join(os.environ["HOME"], ".templates")
@@ -34,7 +35,7 @@ class TemplateLoader:
         for template in self.templates_list:
 
             template_path = os.path.join(self.template_dir, template)
-            with open(template_path, "r") as fp:
+            with codecs.open(template_path, "r", "utf-8") as fp:
                 content = fp.read()
 
             data[template] = content
