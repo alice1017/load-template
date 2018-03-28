@@ -10,12 +10,20 @@ from .core import (
     TemplateLoader,
     render
 )
-from .util import parse_variables
+from .util import (
+    parse_variables,
+    display_list
+)
 
 
 def program(args):
 
     loader = TemplateLoader()
+
+    if args.list:
+        display_list(loader.templates_list)
+        return 0
+
     template_contents = loader.load_template(args.template)
 
     if len(args.vars) != 0:
@@ -52,7 +60,7 @@ def main(argv=sys.argv):
             print stacktrace.strip()
 
         else:
-            sys.stderr.write("{0}: {1}".format(error_name, e.message))
+            sys.stderr.write("{0}: {1}\n".format(error_name, e.message))
 
 
 if __name__ == '__main__':
