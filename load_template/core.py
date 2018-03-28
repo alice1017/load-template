@@ -41,6 +41,14 @@ class TemplateLoader:
 
         return data
 
+    def load_template(self, template):
+
+        if template in self.templates_data:
+            return self.templates_data[template]
+
+        else:
+            raise KeyError("Template has not found: '{0}'".format(template))
+
     def _initialize_dir(self, template_dir, default_dir):
 
         os.mkdir(template_dir)
@@ -49,3 +57,8 @@ class TemplateLoader:
 
             template_path = os.path.join(default_dir, template)
             shutil.copy(template_path, template_dir)
+
+
+def render(template, variables):
+
+    return template.format(**variables)

@@ -47,6 +47,20 @@ class TemplateLoaderTestCase(TestCase):
 
         self._teardown_testdir(template_dir, default_dir)
 
+    def test_load(self):
+
+        template_dir, default_dir = self._setup_testdir()
+
+        loader = TemplateLoader(
+            template_dir=template_dir,
+            default_dir=default_dir
+        )
+
+        self.assertEqual(
+            loader.load_template("python"),
+            "#!/usr/bin/env python\n# coding: utf-8"
+        )
+
     def _setup_testdir(self):
 
         default_dir = "/tmp/load-template-default"
