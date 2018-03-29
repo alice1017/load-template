@@ -2,8 +2,6 @@
 
 [![forthebadge](http://forthebadge.com/images/badges/made-with-python.svg)](http://forthebadge.com)
 
-:exclamation: **load-template IS STILL UNDER DEVELOPMENT.** :exclamation:
-
 ## :page_facing_up: Overview
 
 The **load-template** create a file from the **template** with the **variables**.
