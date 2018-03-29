@@ -11,6 +11,7 @@ setup(
     version=__version__,
     license="MIT License",
     url="https://github.com/alice1017/load-template",
+    packages=["load_template"],
     entry_points={
         "console_scripts": [
             "load-template=load_template.__main__:main"
