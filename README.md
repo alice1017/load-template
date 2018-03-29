@@ -2,6 +2,8 @@
 
 [![forthebadge](http://forthebadge.com/images/badges/made-with-python.svg)](http://forthebadge.com)
 
+[![Build Status](https://travis-ci.org/alice1017/load-template.svg?branch=master)](https://travis-ci.org/alice1017/load-template)
+
 ## :page_facing_up: Overview
 
 The **load-template** create a file from the **template** with the **variables**.
