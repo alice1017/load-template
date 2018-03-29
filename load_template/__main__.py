@@ -46,7 +46,6 @@ def main(argv=sys.argv):
         sys.exit(0)
 
     args = parser.parse_args()
-    print args
 
     try:
         exit_code = program(args)
