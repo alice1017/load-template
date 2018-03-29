@@ -16,7 +16,7 @@ def parse_variables(vars):
 def separate(items, num):
 
     for index in range(0, len(items), num):
-        yield items[index:(index + 3)]
+        yield items[index:(index + num)]
 
 
 def display_list(template_list):
