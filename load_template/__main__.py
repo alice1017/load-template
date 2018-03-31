@@ -24,6 +24,15 @@ def program(args):
         display_list(loader.templates_list)
         return 0
 
+    if args.contents:
+
+        if not args.template:
+            raise ValueError("Please write template name.")
+
+        template_contents = loader.load_template(args.template)
+        print template_contents
+        return 0
+
     template_contents = loader.load_template(args.template)
 
     if len(args.vars) != 0:

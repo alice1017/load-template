@@ -45,6 +45,11 @@ parser.add_argument(
     help="Display the template list.")
 
 parser.add_argument(
+    "-c", "--contents",
+    action="store_true",
+    help="Display contents of the template.")
+
+parser.add_argument(
     "-D", "--dev",
     action="store_true",
     help="Run development mode.")
