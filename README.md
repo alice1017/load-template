@@ -29,6 +29,7 @@ $ load-template [template] [file] [variables [variables ...]]
 ### optional arguments
 
 * *-l*, *--list* - Display the all template list.
+* *-c*, *--contents* - Display contents of the template.
 * *-D*, *--dev* - Run development mode.
 
 ### template variable
