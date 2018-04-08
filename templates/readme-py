@@ -1,0 +1,24 @@
+# {name}
+
+[![forthebadge](http://forthebadge.com/images/badges/made-with-python.svg)](http://forthebadge.com)
+
+[![Build Status](https://travis-ci.org/alice1017/{name}.svg?branch=master)](https://travis-ci.org/alice1017/JustWatch)
+[![Coverage Status](https://coveralls.io/repos/github/alice1017/{name}/badge.svg)](https://coveralls.io/github/alice1017/JustWatch)
+
+
+## :page_facing_up: Overview
+
+## :pencil2: Usage
+
+## :inbox_tray: Installation
+
+```
+$ git clone git@github.com:alice1017{name}.git
+$ cd {name}
+$ python setup.py build install
+```
+
+## :eyes: Contribution
+
+1. Forks on [Github](https://github.com/alice1017/{name})
+2. Find a bug? Send a pull request to get it merged and published.
