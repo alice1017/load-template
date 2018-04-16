@@ -4,10 +4,13 @@
 
 [![Build Status](https://travis-ci.org/alice1017/load-template.svg?branch=master)](https://travis-ci.org/alice1017/load-template)
 [![Coverage Status](https://coveralls.io/repos/github/alice1017/load-template/badge.svg)](https://coveralls.io/github/alice1017/load-template)
+![Python 2.7 only](https://img.shields.io/badge/python-2.7-blue.svg)
 
 ## :page_facing_up: Overview
 
-The **load-template** create a file from the **template** with the **variables**.
+The **load-template** create a file from the **template** with the **variables**,
+and **edit** the file in your **editor**.
+
 You can create templates as freely if you save it :open_file_folder: `~/.templates/`.
 
 If you want to add new default template, please send pull request. :+1:
@@ -30,13 +33,14 @@ $ load-template [template] [file] [variables [variables ...]]
 
 * *-l*, *--list* - Display the all template list.
 * *-c*, *--contents* - Display contents of the template.
+* *-s*, *--sync* - Sync the default template to local template. Before using this feature, you have to do `git pull`.
 * *-D*, *--dev* - Run development mode.
 
 ### template variable
 
-You can set some variables to the template as follows:
+You can set some **variables** to the template as follows:
 
-```
+```html
 <h1>Hello, {name}</h1>
 ```
 
@@ -44,6 +48,12 @@ when use this variable:
 
 ```
 $ load-template template hello.html name=Alice
+```
+
+rendered:
+
+```html
+<h1>Hello, Alice</h1>
 ```
 
 ## :inbox_tray: Installation
@@ -54,8 +64,8 @@ $ cd load-template
 $ python setup.py build install
 ```
 
-You need to clone this repository for installation, Because the
-load-template copies the default templates to `~/.templates/` directory.
+You **need to clone this repository** for installation, Because the
+load-template **copies** the default templates to `~/.templates/` directory.
 
 ## :eyes: Contribution
 
