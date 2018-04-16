@@ -1,6 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+import os
+import sys
+
+from subprocess import call as run
+
 
 def parse_variables(vars):
 
@@ -41,3 +46,36 @@ def display_list(template_list):
                 third_line += template.format(adjust(item))
 
     print "\n".join([first_line, second_line, third_line])
+
+
+def get_editor():
+
+    if sys.platform.startswith("win"):
+        return "notepad.exe"
+
+    editor_env = ["VISUAL", "EDITOR"]
+    editor_cmd = ["vim", "nano"]
+
+    for env in editor_env:
+
+        editor = os.environ.get(env)
+        if editor:
+            return editor
+
+    for cmd in editor_cmd:
+
+        which_cmd = "which {0} > /dev/null 2>&1".format(cmd)
+        is_exist_cmd = (os.system(which_cmd) == 0)
+
+        if is_exist_cmd:
+            return cmd
+
+    return "vi"
+
+
+def edit(filepath):
+
+    editor = get_editor()
+    cmd = [editor, filepath]
+
+    return run(cmd)

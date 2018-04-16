@@ -12,7 +12,8 @@ from .core import (
 )
 from .util import (
     parse_variables,
-    display_list
+    display_list,
+    edit
 )
 
 
@@ -45,7 +46,7 @@ def program(args):
     with codecs.open(args.filename, "w", "utf-8") as fp:
         fp.write(contents)
 
-    return 0
+    return edit(args.filename)
 
 
 def main(argv=sys.argv):
