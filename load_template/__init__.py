@@ -2,4 +2,4 @@
 # coding: utf-8
 
 __author__ = "Hayato Tominaga"
-__version__ = "1.0.0b1"
+__version__ = "1.0.0"

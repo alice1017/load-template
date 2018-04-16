@@ -7,6 +7,7 @@ from load_template import __author__, __version__
 setup(
     name="load-template",
     author=__author__,
+    author_email="takemehighermore@gmail.com",
     description="Create a file from the template with the variables.",
     version=__version__,
     license="MIT License",
@@ -18,7 +19,11 @@ setup(
         ]
     },
     classifiers=[
-        "Development Status :: Alpha",
-        "Programming Language :: Python :: 2.7"
+        "Development Status :: 5 - Production/Stable",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 2 :: Only",
+        "Topic :: Terminals",
+        "Topic :: Utilities"
     ]
 )
