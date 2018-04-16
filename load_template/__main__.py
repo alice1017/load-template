@@ -25,6 +25,11 @@ def program(args):
         display_list(loader.templates_list)
         return 0
 
+    if args.sync:
+
+        loader._sync_templates(loader.template_dir, loader.default_dir)
+        return 0
+
     if args.contents:
 
         if not args.template:

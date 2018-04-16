@@ -21,6 +21,7 @@ class TemplateLoader:
             self._initialize_dir(template_dir, default_dir)
 
         self.template_dir = template_dir
+        self.default_dir = default_dir
 
     @property
     def templates_list(self):
@@ -53,6 +54,9 @@ class TemplateLoader:
     def _initialize_dir(self, template_dir, default_dir):
 
         os.mkdir(template_dir)
+        self._sync_templates(template_dir, default_dir)
+
+    def _sync_templates(self, template_dir, default_dir):
 
         for template in os.listdir(default_dir):
 

@@ -50,6 +50,12 @@ parser.add_argument(
     help="Display contents of the template.")
 
 parser.add_argument(
+    "-s", "--sync",
+    action="store_true",
+    help="Sync the default template to local template. "
+         "Before using this feature, you have to do `git pull`.")
+
+parser.add_argument(
     "-D", "--dev",
     action="store_true",
     help="Run development mode.")
