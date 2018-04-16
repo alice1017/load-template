@@ -6,6 +6,12 @@
 [![Coverage Status](https://coveralls.io/repos/github/alice1017/load-template/badge.svg)](https://coveralls.io/github/alice1017/load-template)
 ![Python 2.7 only](https://img.shields.io/badge/python-2.7-blue.svg)
 
+* [:page_facing_up: Overview](#page_facing_up-overview)
+* [:wrench: Usage](#wrench-usage)
+* [:inbox_tray: Installation](#inbox_tray-installation)
+* [:eyes: Contribution](#eyes-contribution)
+* [CHANGELOG](#changelog)
+
 ## :page_facing_up: Overview
 
 The **load-template** create a file from the **template** with the **variables**,
@@ -71,3 +77,40 @@ load-template **copies** the default templates to `~/.templates/` directory.
 
 1. Forks on [Github](https://github.com/alice1017/load-template)
 2. Find a bug? Add new default template? Send a pull request to get it merged and published.
+
+## CHANGELOG
+
+All notable changes to this project will be documented in this file.
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+
+### [1.0.0] - 2018/4/16
+
+#### Added new feature
+
+* Added `--contents` argument to display template contents. Fixed [#2]
+* Added **edit** feature. Fixed [#3]
+* Added `--sync` argument to sync default template and local template. Fixed [#1]
+
+#### Added new template
+
+* Added `templates/readme-py` template.
+* Added `templates/python-argparser` template.
+
+#### Changed
+
+* Changed a template name: `mit_license` to `mit-license`
+
+#### Other
+
+* Use [**travis-ci**](https://travis-ci.org/alice1017/load-template).
+* Use [**coverall**](https://coveralls.io/github/alice1017/load-template).
+
+### [1.0.0b1] - 2018/3/28
+
+A Beta Version Release.
+
+[1.0.0b1]: https://github.com/alice1017/load-template/compare/a2f5136...1.0.0b1
+[1.0.0]: https://github.com/alice1017/load-template/compare/1.0.0b1...1.0.0
+[#1]: https://github.com/alice1017/load-template/issues/1
+[#2]: https://github.com/alice1017/load-template/issues/2
+[#3]: https://github.com/alice1017/load-template/issues/3
