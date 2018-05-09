@@ -26,26 +26,21 @@ def separate(items, num):
 
 def display_list(template_list):
 
-    first_line = second_line = third_line = ""
+    sepnum = 3
+    lines = [""] * sepnum
+    line_db = dict(zip(range(1, sepnum + 1), lines))
     template = "* {}"
 
-    for items in separate(template_list, 3):
+    for items in separate(template_list, sepnum):
 
         max_length = max([len(item) for item in items]) + 5
         adjust = (lambda item: item.ljust(max_length))
 
         for index, item in enumerate(items, start=1):
+            line_db[index] += template.format(adjust(item))
 
-            if index == 1:
-                first_line += template.format(adjust(item))
-
-            elif index == 2:
-                second_line += template.format(adjust(item))
-
-            elif index == 3:
-                third_line += template.format(adjust(item))
-
-    print "\n".join([first_line, second_line, third_line])
+    for index, line in line_db.iteritems():
+        print line
 
 
 def get_editor():
