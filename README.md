@@ -40,6 +40,7 @@ $ load-template [template] [file] [variables [variables ...]]
 * *-l*, *--list* - Display the all template list.
 * *-c*, *--contents* - Display contents of the template.
 * *-s*, *--sync* - Sync the default template to local template. Before using this feature, you have to do `git pull`.
+* *-n*, *--no-edit* - Create a file from template without edit.
 * *-D*, *--dev* - Run development mode.
 
 ### template variable
