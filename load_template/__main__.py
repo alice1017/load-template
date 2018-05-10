@@ -51,7 +51,11 @@ def program(args):
     with codecs.open(args.filename, "w", "utf-8") as fp:
         fp.write(contents)
 
-    return edit(args.filename)
+    if args.edit:
+        return edit(args.filename)
+
+    else:
+        return 0
 
 
 def main(argv=sys.argv):

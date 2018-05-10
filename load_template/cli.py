@@ -56,6 +56,13 @@ parser.add_argument(
          "Before using this feature, you have to do `git pull`.")
 
 parser.add_argument(
+    "-n", "--no-edit",
+    action="store_false",
+    dest="edit",
+    default=True,
+    help="create a file without edit.")
+
+parser.add_argument(
     "-D", "--dev",
     action="store_true",
     help="Run development mode.")
